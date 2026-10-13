@@ -117,6 +117,6 @@ Hospitals and clinics should:
 
 - `README.md` - this document
 - `dashboard.png` - interactive dashboard screenshot
-- `no-show-analysis.xlsx` - full Excel workbook (Power Query steps, pivots, PivotCharts, dashboard)
+- `no-show.xlsx` - full Excel workbook (Power Query steps, pivots, PivotCharts, dashboard)
 
 *Note: the workbook contains an interactive slicer that filters all four charts.*
