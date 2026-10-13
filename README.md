@@ -17,7 +17,9 @@ This matters because missed appointments waste clinical time, lengthen waiting l
 Source: Medical Appointment No-Shows (Kaggle, Brazil, 2016).
 
 · 110,521 appointments after cleaning
+
 · 15 columns covering patient demographics, scheduling and appointment dates, chronic conditions, SMS reminder status, and no-show outcome
+
 · Each row is one appointment, a patient may appear multiple times
 
 ---
@@ -27,22 +29,32 @@ Source: Medical Appointment No-Shows (Kaggle, Brazil, 2016).
 1.  Before building anything I first checked:
 
 · How many rows and columns?
+
 · What are the column types?
+
 · What are the values in the outcome column (NoShow)?
+
 · Which columns are missing or mostly empty?
+
 · Which columns are likely to matter?
 
 2. Cleaning in Power Query:
 
 · Converted ScheduledDay and AppointmentDay to Date type
+
 · Created a LeadTime column (days between booking and appointment)
+
 · Filtered out rows with negative lead times (data errors)
+
 · Created a NoShowFlag column (1 for no-show, 0 for showed up) this is required for aggregating the outcome as a rate
+
 
 3. Analysis:
 
 · Built PivotTables for each candidate variable against NoShowFlag
+
 · Used Average of the flag column to calculate the no-show rate per group (avoids the double-series chart problem)
+
 · Ranked findings by strength of pattern
 
 ---
@@ -86,8 +98,11 @@ Hospitals and clinics should:
 ## Limitations
 
 · Old data : from 2016, patterns may have shifted.
+
 · Dataset was from a single country : Brazil only. May not generalise to other regions.
-· SMS cannot be causally interpreted : no random assignment, so the reminder's true effect is unknown.
+
+· SMS cannot be causally interpreted : no random assignment, so the reminder's true effect is unknown
+
 · Small groups in the tail : lead times beyond ~70 days have too few appointments to be reliable. Analysis focuses on the well-populated range.
 
 ---
