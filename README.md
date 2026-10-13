@@ -110,3 +110,13 @@ Hospitals and clinics should:
 ## Tools
 
 · Excel (Power Query, PivotTables, PivotCharts, slicers, KPI formulas).
+
+---
+
+## Files
+
+- `README.md` - this document
+- `dashboard.png` - interactive dashboard screenshot
+- `no-show-analysis.xlsx` - full Excel workbook (Power Query steps, pivots, PivotCharts, dashboard)
+
+*Note: the workbook contains an interactive slicer that filters all four charts.*
